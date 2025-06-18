@@ -21,3 +21,13 @@ JDBC API is used to establish connection between Java and Database.
 
 ![image](https://github.com/user-attachments/assets/56a5b1ac-0728-4dab-919f-32d71602ce72)
 
+
+
+#Interfaces that are available in JDBC API
+• Connection: This interface is used to establish connection between Java and database. 
+
+• Statement: This interface is used to create a platform for executing the SQL Queries.
+
+• PreparedStatement: This interface extends Statement Interface and also used to create a platform for executing DQL queries. 
+
+• ResultSet: This interface is used to retrieve the data from the resultant table that will be stored in cursor or buffer memory. 
