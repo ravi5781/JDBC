@@ -23,7 +23,7 @@ JDBC API is used to establish connection between Java and Database.
 
 
 
-#Interfaces that are available in JDBC API
+# Interfaces that are available in JDBC API
 • Connection: This interface is used to establish connection between Java and database. 
 
 • Statement: This interface is used to create a platform for executing the SQL Queries.
