@@ -10,8 +10,8 @@ JDBC API is used to establish connection between Java and Database.
 • JDBC API is given by Sun Microsystems and is available in JRE library in the form of jar file.
 
 • JDBC API consists of two packages. They are
-java.sql
-javax.sql 
+        1).java.sql
+        2).javax.sql 
 
 • JDBC API consists of Interfaces and Factory classes. 
 
