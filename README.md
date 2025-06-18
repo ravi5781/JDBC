@@ -1,6 +1,10 @@
 # JDBC
 
 JDBC API is used to establish connection between Java and Database.
+
+
+
+
 ![image](https://github.com/user-attachments/assets/c2565a43-4d44-4dc8-a13b-79445dceadc7)
 
 • JDBC API is given by Sun Microsystems and is available in JRE library in the form of jar file. 
