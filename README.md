@@ -59,6 +59,9 @@ forName() takes fully qualified class name as a argument.
 
 Class.forName("fully qualified class name"); //throws ClassNotFoundException
 
+
+
+
 ## 2. Establishing the connection between Java and Database
 
 In this step, the connection between Java and database is established by using getConnection().
@@ -76,6 +79,10 @@ public static Connection DriverManager.getConnection(String url);
 public static Connection DriverManager.getConnection(String url, Properties info);
 public static Connection DriverManager.getConnection(String url, String user, String password);
 
+
+
+
+
 **Connection Interface (java.sql.Connection)**
 Connection interface is a part of JDBC API and the implementation for this interface is provided by respective database servers or venders.
 
@@ -86,6 +93,12 @@ The return type of getConnection() is Connection Interface.
 **Syntax**:
 
 Connection con = DriverManager.getConnection("url");
+
+
+
+
+
+
 
 ##3. Creation of the platform
 In this step, a platform is created in the java program to execute SQL query.
@@ -102,6 +115,8 @@ A platform can be created either by using Statement Interface or PreparedStateme
 
 Statement st = con.createStatement();
 
+
+
 ##4. Execution of Queries
 The different types of SQL queries are:
 
@@ -111,6 +126,8 @@ The different types of SQL queries are:
 
 To execute, the SQL queries we have 3 different methods that are available in Statement Interface and PreparedStatement Interface.
 They are execute(), executeUpdate(), executeQuery().
+
+
 
 **execute()**
 It is a generic method available in Statement and PreparedStatement Interface.
@@ -123,6 +140,11 @@ The return type of execute() is Boolean.
 
 public boolean st.execute(String query);
 
+
+
+
+
+
 **executeUpdate()**
 It is a specific method present in Statement and PreparedStatement Interface.
 
@@ -133,6 +155,9 @@ The return type of executeUpdate() is int. Because it returns the number of rows
 **Syntax:**
 
 public int st.executeUpdate(String query);
+
+
+
 
 **executeQuery()**
 
@@ -148,7 +173,11 @@ It returns the reference object of type ResultSet Interface.
 
 ResultSet rs = st.executeQuery(String query);
 
-##ResultSet Interface
+
+
+
+
+#ResultSet Interface
 
 Normally, the results we get from executing the DQL queries are known as Result sets.
 
