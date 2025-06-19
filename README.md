@@ -39,6 +39,9 @@ JDBC API is used to establish connection between Java and Database.
 5. Generating the Result (DQL)
 6. Closing all the costly resources (deprecated).
 
+7. ![image](https://github.com/user-attachments/assets/12eee51d-ead1-4dbb-88b2-622e1f9ffe83)
+
+
 ## 1. Loading and Registering the Driver class
 
 In this step, we have to load and register the driver class which is a part of JDBC driver which are provided by respective database servers of venders. We can load the driver by using a static method called as forName(). We can use try and catch block to handle the exception.
