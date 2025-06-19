@@ -71,10 +71,10 @@ Whenever **getConnection()** is called, it throws SQLException.
 
 **getConnection()** is a overloaded method and takes URL as a argument is three different way.
 
-\*\*
+
 public static Connection DriverManager.getConnection(String url);
 public static Connection DriverManager.getConnection(String url, Properties info);
-public static Connection DriverManager.getConnection(String url, String user, String password);\*\*
+public static Connection DriverManager.getConnection(String url, String user, String password);
 
 **Connection Interface (java.sql.Connection)**
 Connection interface is a part of JDBC API and the implementation for this interface is provided by respective database servers or venders.
@@ -87,7 +87,7 @@ The return type of getConnection() is Connection Interface.
 
 Connection con = DriverManager.getConnection("url");
 
-\##3. Creation of the platform
+##3. Creation of the platform
 In this step, a platform is created in the java program to execute SQL query.
 
 A platform can be created either by using Statement Interface or PreparedStatement Interface.
@@ -102,7 +102,7 @@ A platform can be created either by using Statement Interface or PreparedStateme
 
 Statement st = con.createStatement();
 
-\##4. Execution of Queries
+##4. Execution of Queries
 The different types of SQL queries are:
 
 **DML (Data Manipulation Language)** : INSERT, UPDATE, DELETE
@@ -135,6 +135,7 @@ The return type of executeUpdate() is int. Because it returns the number of rows
 public int st.executeUpdate(String query);
 
 **executeQuery()**
+
 It is a specific method present in Statement and PreparedStatement Interface.
 
 This method is only for executing the DQL queries.
@@ -147,7 +148,8 @@ It returns the reference object of type ResultSet Interface.
 
 ResultSet rs = st.executeQuery(String query);
 
-\##ResultSet Interface
+##ResultSet Interface
+
 Normally, the results we get from executing the DQL queries are known as Result sets.
 
 These Result sets will be stored in cursor or buffer memory.
@@ -161,6 +163,7 @@ A set of methods of ResultSet interface to fetch the DQL processed data or resul
 **Syntax:**
 
 public XXX rs.getXXX(int column\_index);
+
 public XXX rs.getXXX(String column\_name);
 
 Example:
