@@ -1,0 +1,47 @@
+import java.sql.*; // Importing the JDBC package
+
+public class _4_Jdbc_retrive {
+
+	public static void main(String[] args) {
+		Connection con = null;           // Connection object to connect with database
+		Statement st=null;                    // Statement object to execute SQL queries
+		PreparedStatement ps=null;            // PreparedStatement object 
+		
+		// Database connection details
+		String url = "jdbc:mysql://localhost:3306/college";  // Database URL
+		String user = "root";                                 // Database username
+		String password = "tiger";                            // Database password
+
+		try {
+			// Step 1: Load and register JDBC driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			// Step 2: Establish the database connection
+			con = DriverManager.getConnection(url, user, password);
+			
+			// Step 3: Create a statement object
+			st = con.createStatement();
+
+			// Step 4: SQL SELECT query to retrieve data from student table
+			String query = "Select * from student";
+
+			// Step 5: Prepare statement (not used here, but declared)
+			ps = con.prepareStatement(query);
+
+			// Step 6: Execute the query and store result in ResultSet
+			ResultSet rs = st.executeQuery(query);
+
+			// Step 7: Iterate over the ResultSet and print required columns
+			while (rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				String branch = rs.getString("branch");
+				System.out.println(id + " " + name + " " + branch);
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// Exception handling
+			e.printStackTrace();
+		}
+	}
+}
